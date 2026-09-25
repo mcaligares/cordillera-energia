@@ -42,7 +42,7 @@ export default function Hero() {
 
       <div className={`contenedor ${estilos.contenido}`}>
         <p className={estilos.kicker}>Vaca Muerta · Neuquén, Argentina</p>
-        <h1 className={estilos.titulo}>Energía que nace de la cordillera</h1>
+        <h1 className={estilos.titulo}>Conocé cómo opera Cordillera y evaluá una posible colaboración</h1>
         <p className={estilos.bajada}>
           {empresa.nombreCorto} produce {formatoNumero(produccionTotal)} boe/d de shale oil
           y gas en cuatro bloques de Vaca Muerta. Tres de ellos los operamos nosotros.
