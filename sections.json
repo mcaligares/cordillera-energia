@@ -1,0 +1,39 @@
+{
+  "_nota": "BASELINE RECONSTRUIDO. El sections.json original del sitio 2019 no estaba disponible en el repo al momento del rediseno. Este archivo documenta los ids de seccion que el rediseno asume como preexistentes y que, por lo tanto, NO se renombran. Si aparece el archivo real, el unico trabajo pendiente es remapear ids en /config/sections.config.ts y en la propiedad SECTION_ID de cada componente.",
+  "version": "1.4.0",
+  "sitio": "cordilleraenergia.com.ar",
+  "generado": "2019-11-04",
+  "paginas": {
+    "home": {
+      "template": "home.php",
+      "secciones": [
+        { "id": "hero", "titulo": "Energia que nace de la cordillera", "tipo": "carousel", "slides": 3 },
+        { "id": "quienes-somos", "titulo": "Quienes somos", "tipo": "texto-imagen" },
+        { "id": "operaciones", "titulo": "Nuestras operaciones", "tipo": "texto-imagen" },
+        { "id": "sustentabilidad", "titulo": "Compromiso sustentable", "tipo": "texto-imagen" },
+        { "id": "inversores", "titulo": "Inversores", "tipo": "lista-links" },
+        { "id": "prensa", "titulo": "Sala de prensa", "tipo": "grilla-noticias" },
+        { "id": "contacto", "titulo": "Contacto", "tipo": "formulario" }
+      ]
+    },
+    "inversores": {
+      "template": "interna.php",
+      "secciones": [
+        { "id": "inversores", "titulo": "Informacion para inversores", "tipo": "acordeon-pdf" }
+      ]
+    },
+    "operaciones": {
+      "template": "interna.php",
+      "secciones": [
+        { "id": "operaciones", "titulo": "Operaciones", "tipo": "texto-largo" }
+      ]
+    },
+    "sustentabilidad": {
+      "template": "interna.php",
+      "secciones": [
+        { "id": "sustentabilidad", "titulo": "Sustentabilidad", "tipo": "texto-largo" }
+      ]
+    }
+  },
+  "_deuda_conocida": "El orden real que renderiza home.php esta hardcodeado en el PHP y no coincide con este archivo (ver ISS-15). Este JSON se usa solo para el menu."
+}

@@ -1,0 +1,72 @@
+.grilla {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background-color: var(--borde-sutil);
+  border: 1px solid var(--borde-sutil);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+
+.celda {
+  padding: var(--e-5);
+  background-color: var(--c-papel);
+}
+
+.guidance {
+  margin-top: var(--e-8);
+}
+
+.tituloGuidance {
+  font-size: var(--fs-h4);
+  margin-bottom: var(--e-4);
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-sm);
+}
+
+.tabla th,
+.tabla td {
+  padding: var(--e-3) var(--e-4);
+  text-align: left;
+  border-bottom: 1px solid var(--borde-sutil);
+}
+
+.tabla thead th {
+  font-weight: var(--peso-semi);
+  color: var(--txt-atenuado);
+  border-bottom-width: 2px;
+}
+
+.tabla tbody th {
+  font-weight: var(--peso-medio);
+}
+
+.tabla tbody td {
+  color: var(--txt-secundario);
+}
+
+.estado {
+  display: inline-block;
+  padding: 2px var(--e-3);
+  border-radius: var(--r-pill);
+  background-color: var(--c-verde-100);
+  color: var(--c-verde-700);
+  font-size: var(--fs-xs);
+  font-weight: var(--peso-semi);
+}
+
+@media (min-width: 560px) {
+  .grilla {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .grilla {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

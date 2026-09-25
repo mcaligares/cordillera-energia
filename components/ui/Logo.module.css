@@ -1,0 +1,58 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e-3);
+  color: inherit;
+}
+
+.marca {
+  flex: none;
+  width: 38px;
+  height: 38px;
+}
+
+.caja {
+  fill: var(--c-azul-800);
+}
+
+.crestaFondo {
+  fill: var(--c-azul-600);
+}
+
+.crestaMedia {
+  fill: var(--c-azul-300);
+}
+
+.crestaAcento {
+  fill: var(--c-cobre-400);
+}
+
+.base {
+  fill: rgba(255, 255, 255, 0.34);
+}
+
+.nombre {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+}
+
+.principal {
+  font-size: 1.0625rem;
+  font-weight: var(--peso-bold);
+}
+
+.secundario {
+  font-size: 0.8125rem;
+  font-weight: var(--peso-medio);
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+
+/* Sobre fondo oscuro la caja del isotipo se invierte para no apagarse */
+:global([data-tono='oscuro']) .caja,
+.enOscuro .caja {
+  fill: rgba(255, 255, 255, 0.1);
+}

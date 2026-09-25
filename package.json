@@ -1,0 +1,33 @@
+{
+  "name": "cordillera-energia",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Sitio corporativo de Cordillera Energia S.A. - rediseno 2026 con variantes de homepage por perfil de audiencia.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "seed:posthog": "node scripts/seed-posthog.mjs",
+    "seed:posthog:dry": "node scripts/seed-posthog.mjs --dry-run",
+    "assets": "python3 scripts/generar-assets.py"
+  },
+  "dependencies": {
+    "next": "16.3.6",
+    "posthog-js": "1.434.14",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.15.3",
+    "@types/react": "19.1.9",
+    "@types/react-dom": "19.1.7",
+    "eslint": "9.27.0",
+    "eslint-config-next": "16.3.6",
+    "typescript": "5.8.3"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}

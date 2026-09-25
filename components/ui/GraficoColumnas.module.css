@@ -1,0 +1,198 @@
+.figura {
+  margin: 0;
+}
+
+.encabezado {
+  margin-bottom: var(--e-5);
+}
+
+.titulo {
+  font-size: var(--fs-h4);
+  font-weight: var(--peso-semi);
+  color: var(--txt-primario);
+}
+
+.subtitulo {
+  margin-top: var(--e-1);
+  font-size: var(--fs-sm);
+  color: var(--txt-atenuado);
+}
+
+.lienzo {
+  position: relative;
+  width: 100%;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.grupoColumna {
+  cursor: default;
+}
+
+.columna {
+  transition: fill-opacity var(--t-rapida);
+}
+
+.grilla {
+  stroke: var(--grafico-grilla);
+  stroke-width: 1;
+}
+
+.objetivo {
+  stroke: var(--txt-atenuado);
+  stroke-width: 2;
+  stroke-dasharray: 6 5;
+}
+
+.tickY,
+.tickX,
+.valor,
+.etiquetaObjetivo {
+  font-family: var(--f-sans);
+  font-size: 13px;
+  fill: var(--txt-atenuado);
+}
+
+.tickY {
+  text-anchor: end;
+}
+
+.tickX {
+  text-anchor: middle;
+}
+
+.valor {
+  text-anchor: middle;
+  font-size: 14px;
+  font-weight: var(--peso-semi);
+  fill: var(--txt-primario);
+}
+
+.etiquetaObjetivo {
+  font-size: 13px;
+  font-weight: var(--peso-medio);
+  fill: var(--txt-secundario);
+}
+
+.objetivoMobile {
+  margin-top: var(--e-3);
+  padding-left: var(--e-5);
+  border-left: 2px dashed var(--txt-atenuado);
+  font-size: var(--fs-sm);
+  color: var(--txt-secundario);
+}
+
+/* --- Tooltip -------------------------------------------------------------- */
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  min-width: 132px;
+  padding: var(--e-3) var(--e-4);
+  background-color: var(--c-papel);
+  border: 1px solid var(--borde-sutil);
+  border-radius: var(--r-md);
+  box-shadow: var(--sombra-lg);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.tooltipPeriodo {
+  font-size: var(--fs-sm);
+  color: var(--txt-secundario);
+}
+
+.tooltipValor {
+  margin-top: var(--e-1);
+  font-size: var(--fs-h4);
+  font-weight: var(--peso-semi);
+  color: var(--txt-primario);
+}
+
+.tooltipUnidad {
+  font-size: var(--fs-sm);
+  font-weight: var(--peso-normal);
+  color: var(--txt-atenuado);
+}
+
+.tooltipNota {
+  margin-top: var(--e-1);
+  font-size: var(--fs-xs);
+  color: var(--txt-atenuado);
+}
+
+/* --- Pie ------------------------------------------------------------------ */
+
+.piePie {
+  margin-top: var(--e-4);
+}
+
+.alternar {
+  padding: 0;
+  background: none;
+  border: none;
+  font-size: var(--fs-sm);
+  font-weight: var(--peso-medio);
+  color: var(--c-azul-700);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.alternar:hover {
+  color: var(--c-cobre-800);
+}
+
+/* --- Sobre fondo oscuro ---------------------------------------------------- */
+
+.oscuro .titulo {
+  color: var(--txt-inv-primario);
+}
+
+.oscuro .subtitulo {
+  color: var(--txt-inv-atenuado);
+}
+
+.oscuro .grilla {
+  stroke: var(--grafico-grilla-inv);
+}
+
+.oscuro .tickY,
+.oscuro .tickX {
+  fill: var(--txt-inv-atenuado);
+}
+
+.oscuro .valor {
+  fill: var(--txt-inv-primario);
+}
+
+.oscuro .objetivo {
+  stroke: var(--txt-inv-atenuado);
+}
+
+.oscuro .etiquetaObjetivo {
+  fill: var(--txt-inv-secundario);
+}
+
+.oscuro .tooltip {
+  background-color: var(--sup-oscura-elevada);
+  border-color: var(--borde-inv-fuerte);
+}
+
+.oscuro .tooltipValor {
+  color: var(--txt-inv-primario);
+}
+
+.oscuro .tooltipPeriodo,
+.oscuro .tooltipUnidad,
+.oscuro .tooltipNota {
+  color: var(--txt-inv-secundario);
+}
+
+.oscuro .alternar {
+  color: var(--c-cobre-300);
+}

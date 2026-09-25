@@ -1,0 +1,22 @@
+.grilla {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--e-6);
+}
+
+.celda {
+  padding-top: var(--e-4);
+  border-top: 2px solid var(--c-verde-600);
+}
+
+@media (min-width: 560px) {
+  .grilla {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .grilla {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

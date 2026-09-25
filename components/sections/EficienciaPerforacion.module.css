@@ -1,0 +1,77 @@
+.cuerpo {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--e-6);
+  align-items: start;
+}
+
+.grafico {
+  min-width: 0;
+  padding: var(--e-5);
+  border: 1px solid var(--borde-sutil);
+  border-radius: var(--r-lg);
+  background-color: var(--c-hueso);
+}
+
+.record {
+  padding: var(--e-6);
+  background-color: var(--c-azul-800);
+  border-radius: var(--r-lg);
+  color: var(--txt-inv-primario);
+}
+
+.recordEtiqueta {
+  font-family: var(--f-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--c-cobre-300);
+}
+
+.recordValor {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25em;
+  margin-top: var(--e-3);
+  font-size: var(--fs-dato);
+}
+
+.recordValor span {
+  font-size: 0.34em;
+  font-weight: var(--peso-medio);
+  letter-spacing: 0;
+  color: var(--txt-inv-secundario);
+}
+
+.recordDetalle {
+  margin-top: var(--e-3);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-cuerpo);
+  color: var(--txt-inv-secundario);
+}
+
+.metricas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--e-6);
+  margin-top: var(--e-8);
+  padding-top: var(--e-6);
+  border-top: 1px solid var(--borde-sutil);
+}
+
+@media (min-width: 560px) {
+  .metricas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .cuerpo {
+    grid-template-columns: minmax(0, 2.6fr) minmax(220px, 1fr);
+    gap: var(--e-7);
+  }
+
+  .metricas {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

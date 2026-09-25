@@ -1,0 +1,58 @@
+.encabezado {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--e-5);
+  margin-bottom: var(--e-8);
+}
+
+.texto {
+  /* Ancho de medida pensado para el titulo; la bajada afina el suyo aparte. */
+  max-width: 48rem;
+  min-width: 0;
+}
+
+.centro {
+  justify-content: center;
+  text-align: center;
+}
+
+.centro .texto {
+  margin-inline: auto;
+}
+
+.titulo {
+  font-size: var(--fs-h2);
+  font-weight: var(--peso-semi);
+}
+
+.tituloChico {
+  font-size: var(--fs-h3);
+}
+
+.bajada {
+  max-width: 58ch;
+  margin-top: var(--e-4);
+  font-size: var(--fs-cuerpo-lg);
+  line-height: var(--lh-cuerpo);
+  color: var(--txt-secundario);
+}
+
+:global(.seccion-oscura) .bajada,
+:global([data-tono='oscuro']) .bajada {
+  color: var(--txt-inv-secundario);
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e-3);
+  padding-bottom: var(--e-1);
+}
+
+@media (max-width: 640px) {
+  .encabezado {
+    margin-bottom: var(--e-6);
+  }
+}

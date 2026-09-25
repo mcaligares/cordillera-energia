@@ -1,0 +1,336 @@
+/* ============================================================================
+   Cordillera Energia S.A. - Sistema de diseno 2026
+   Todas las variables de marca viven aca. Ningun componente hardcodea color,
+   tipografia ni espaciado.
+   Continuidad de marca: el azul institucional y el cobre vienen del sitio 2019;
+   lo que cambia es la escala (mas oscuro para fondos, mas saturado para datos)
+   y el contraste, que ahora cumple AA (ISS-12).
+   ========================================================================= */
+
+:root {
+  /* --- Marca: azul cordillera ------------------------------------------- */
+  --c-azul-950: #04121f;
+  --c-azul-900: #06192e;
+  --c-azul-800: #0a2540; /* fondo oscuro canonico */
+  --c-azul-700: #0f3558;
+  --c-azul-600: #15629e; /* azul institucional / serie petroleo en graficos */
+  --c-azul-300: #4a93cc; /* marca sobre fondo oscuro */
+  --c-azul-100: #d8e6f2;
+  --c-azul-050: #eef4fa;
+
+  /* --- Marca: cobre (acento, energia) ----------------------------------- */
+  --c-cobre-800: #9c4514;
+  --c-cobre-700: #a94c18; /* texto y fondo de boton: AA sobre hueso y con blanco */
+  --c-cobre-600: #c25a20; /* solo marca de grafico sobre superficie clara */
+  --c-cobre-400: #ce7532; /* marca de grafico sobre fondo oscuro */
+  --c-cobre-300: #f0a868; /* texto de acento sobre fondo oscuro */
+  --c-cobre-100: #f7e5d8;
+
+  /* --- Marca: verde (desempeno positivo / ESG) --------------------------- */
+  --c-verde-700: #14684f;
+  --c-verde-600: #177f63;
+  --c-verde-400: #32a183;
+  --c-verde-300: #5ad1a8;
+  --c-verde-100: #dceee8;
+
+  /* --- Senal negativa ---------------------------------------------------- */
+  --c-rojo-700: #a8301f;
+  --c-rojo-300: #f08a7a;
+
+  /* --- Neutros ----------------------------------------------------------- */
+  --c-papel: #ffffff;
+  --c-hueso: #fbfaf8; /* superficie base del sitio y de los graficos claros */
+  --c-gris-100: #f1eeea;
+  --c-gris-200: #e2ddd6;
+  --c-gris-300: #cfc8be;
+  --c-gris-600: #4a5560;
+  --c-tinta: #14181c;
+
+  /* --- Tokens de texto (nunca usar un color de marca para texto chico) ---- */
+  --txt-primario: var(--c-tinta); /* 17.1:1 sobre hueso */
+  --txt-secundario: #4a5560; /* 7.3:1  */
+  --txt-atenuado: #5f6b77; /* 5.2:1  */
+  --txt-inv-primario: #ffffff; /* 15.5:1 sobre azul-800 */
+  --txt-inv-secundario: #b9c9d8; /* 9.2:1  */
+  --txt-inv-atenuado: #8fb4d2; /* 7.1:1  */
+
+  /* --- Superficies -------------------------------------------------------- */
+  --sup-base: var(--c-hueso);
+  --sup-elevada: var(--c-papel);
+  --sup-hundida: var(--c-gris-100);
+  --sup-oscura: var(--c-azul-800);
+  --sup-oscura-elevada: #0e2e4e;
+  --borde-sutil: var(--c-gris-200);
+  --borde-fuerte: var(--c-gris-300);
+  --borde-inv: rgba(255, 255, 255, 0.16);
+  --borde-inv-fuerte: rgba(255, 255, 255, 0.28);
+
+  /* --- Series de grafico (validadas: banda de luminosidad, croma, CVD, contraste) */
+  --serie-1: var(--c-azul-600); /* petroleo   */
+  --serie-2: var(--c-cobre-600); /* gas        */
+  --serie-3: var(--c-verde-600); /* terciaria  */
+  --serie-1-inv: var(--c-azul-300);
+  --serie-2-inv: var(--c-cobre-400);
+  --serie-3-inv: var(--c-verde-400);
+  --grafico-grilla: var(--c-gris-200);
+  --grafico-grilla-inv: rgba(255, 255, 255, 0.14);
+  --grafico-superficie: var(--c-hueso);
+  --grafico-superficie-inv: var(--c-azul-800);
+
+  /* --- Tipografia --------------------------------------------------------- */
+  /* ISS-15: Arial de sistema, sin escala. Ahora Archivo (texto y titulos, con
+     caracter en los pesos altos) + IBM Plex Mono para datos y tickers.      */
+  --f-sans: var(--fuente-archivo), 'Helvetica Neue', Arial, sans-serif;
+  --f-mono: var(--fuente-plex-mono), ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --fs-display: clamp(2.75rem, 1.55rem + 4.8vw, 5.25rem);
+  --fs-h1: clamp(2.125rem, 1.45rem + 2.7vw, 3.5rem);
+  --fs-h2: clamp(1.75rem, 1.35rem + 1.6vw, 2.625rem);
+  --fs-h3: clamp(1.1875rem, 1.08rem + 0.45vw, 1.5rem);
+  --fs-h4: clamp(1.0625rem, 1.02rem + 0.2vw, 1.1875rem);
+  --fs-cuerpo-lg: clamp(1.0625rem, 1.01rem + 0.28vw, 1.25rem);
+  --fs-cuerpo: 1rem;
+  --fs-sm: 0.9375rem; /* piso de 15px para texto de apoyo (ISS-15) */
+  --fs-xs: 0.8125rem; /* solo eyebrows y labels en mayusculas con tracking */
+  --fs-dato-xl: clamp(3rem, 1.9rem + 3.4vw, 4.75rem);
+  --fs-dato: clamp(2.125rem, 1.6rem + 1.9vw, 3rem);
+  --fs-dato-sm: clamp(1.5rem, 1.32rem + 0.7vw, 1.875rem);
+
+  --peso-normal: 400;
+  --peso-medio: 500;
+  --peso-semi: 600;
+  --peso-bold: 700;
+
+  --ls-display: -0.03em;
+  --ls-titulo: -0.02em;
+  --ls-eyebrow: 0.11em;
+  --ls-dato: -0.025em;
+
+  --lh-ajustado: 1.04;
+  --lh-titulo: 1.14;
+  --lh-cuerpo: 1.62;
+  --lh-compacto: 1.4;
+
+  /* --- Espaciado ----------------------------------------------------------- */
+  --e-1: 0.25rem;
+  --e-2: 0.5rem;
+  --e-3: 0.75rem;
+  --e-4: 1rem;
+  --e-5: 1.5rem;
+  --e-6: 2rem;
+  --e-7: 2.5rem;
+  --e-8: 3rem;
+  --e-9: 4rem;
+  --e-10: 5rem;
+  --e-11: 6rem;
+  --e-12: 8rem;
+
+  --pad-seccion: clamp(3.5rem, 2.4rem + 4.6vw, 7rem);
+  --gutter: clamp(1.25rem, 0.8rem + 2vw, 3rem);
+  --ancho-max: 1280px;
+  --ancho-texto: 64ch;
+
+  /* --- Formas ------------------------------------------------------------- */
+  --r-sm: 3px;
+  --r-md: 6px;
+  --r-lg: 10px;
+  --r-xl: 16px;
+  --r-pill: 999px;
+
+  --sombra-sm: 0 1px 2px rgba(10, 37, 64, 0.06);
+  --sombra-md: 0 2px 8px rgba(10, 37, 64, 0.07), 0 1px 2px rgba(10, 37, 64, 0.05);
+  --sombra-lg: 0 12px 32px rgba(10, 37, 64, 0.1), 0 2px 6px rgba(10, 37, 64, 0.05);
+
+  /* --- Movimiento --------------------------------------------------------- */
+  --t-rapida: 140ms cubic-bezier(0.2, 0, 0.13, 1);
+  --t-media: 260ms cubic-bezier(0.2, 0, 0.13, 1);
+
+  --alto-header: 72px;
+  --z-header: 100;
+  --z-menu: 110;
+  --z-skiplink: 200;
+}
+
+/* ---------------------------------------------------------------------------
+   Reset acotado
+   ------------------------------------------------------------------------ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--alto-header) + var(--e-4));
+}
+
+body {
+  margin: 0;
+  background-color: var(--sup-base);
+  color: var(--txt-primario);
+  font-family: var(--f-sans);
+  font-size: var(--fs-cuerpo);
+  line-height: var(--lh-cuerpo);
+  font-weight: var(--peso-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: var(--peso-semi);
+  letter-spacing: var(--ls-titulo);
+  line-height: var(--lh-titulo);
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+  text-underline-offset: 0.18em;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+/* ISS-14: el reset viejo tenia `outline: none` global. Foco visible siempre. */
+:focus-visible {
+  outline: 3px solid var(--c-cobre-700);
+  outline-offset: 2px;
+  border-radius: var(--r-sm);
+}
+
+[data-tema='oscuro'] :focus-visible {
+  outline-color: var(--c-cobre-300);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Utilidades compartidas entre secciones
+   ------------------------------------------------------------------------ */
+
+.contenedor {
+  width: 100%;
+  max-width: var(--ancho-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.seccion {
+  padding-block: var(--pad-seccion);
+  scroll-margin-top: calc(var(--alto-header) + var(--e-4));
+}
+
+.seccion-oscura {
+  background-color: var(--sup-oscura);
+  color: var(--txt-inv-primario);
+}
+
+.seccion-hundida {
+  background-color: var(--sup-hundida);
+}
+
+.eyebrow {
+  display: block;
+  margin: 0 0 var(--e-4);
+  font-family: var(--f-mono);
+  font-size: var(--fs-xs);
+  font-weight: var(--peso-medio);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--txt-atenuado);
+}
+
+.seccion-oscura .eyebrow {
+  color: var(--txt-inv-atenuado);
+}
+
+.solo-lectores {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Cifras: proporcionales cuando son grandes y aisladas, tabulares en columnas */
+.dato {
+  font-family: var(--f-sans);
+  font-weight: var(--peso-semi);
+  letter-spacing: var(--ls-dato);
+  line-height: var(--lh-ajustado);
+  font-variant-numeric: proportional-nums;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------------------------------------------------------------------------
+   Skip link (ISS-14)
+   ------------------------------------------------------------------------ */
+
+.saltar {
+  position: absolute;
+  left: var(--e-4);
+  top: var(--e-4);
+  z-index: var(--z-skiplink);
+  padding: var(--e-3) var(--e-5);
+  background-color: var(--c-papel);
+  color: var(--txt-primario);
+  font-size: var(--fs-sm);
+  font-weight: var(--peso-semi);
+  border-radius: var(--r-md);
+  box-shadow: var(--sombra-lg);
+  text-decoration: none;
+  transform: translateY(-200%);
+  transition: transform var(--t-rapida);
+}
+
+.saltar:focus {
+  transform: translateY(0);
+}

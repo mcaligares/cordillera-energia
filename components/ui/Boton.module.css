@@ -1,0 +1,117 @@
+.boton {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: var(--e-3) var(--e-5);
+  border: 1px solid transparent;
+  border-radius: var(--r-md);
+  font-size: var(--fs-sm);
+  font-weight: var(--peso-semi);
+  line-height: 1.25;
+  text-decoration: none;
+  transition:
+    background-color var(--t-rapida),
+    border-color var(--t-rapida),
+    color var(--t-rapida),
+    transform var(--t-rapida);
+}
+
+.boton:hover {
+  transform: translateY(-1px);
+}
+
+.boton:active {
+  transform: translateY(0);
+}
+
+.lg {
+  padding: var(--e-4) var(--e-6);
+  font-size: var(--fs-cuerpo);
+}
+
+.etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e-2);
+}
+
+.meta {
+  font-family: var(--f-mono);
+  font-size: var(--fs-xs);
+  font-weight: var(--peso-normal);
+  letter-spacing: 0.02em;
+  opacity: 0.82;
+}
+
+/* --- Primario ------------------------------------------------------------ */
+
+.primario.claro {
+  background-color: var(--c-cobre-700);
+  color: var(--c-papel);
+}
+
+.primario.claro:hover {
+  background-color: var(--c-cobre-800);
+}
+
+.primario.oscuro {
+  background-color: var(--c-cobre-700);
+  color: var(--c-papel);
+}
+
+.primario.oscuro:hover {
+  background-color: var(--c-cobre-600);
+}
+
+/* --- Secundario ---------------------------------------------------------- */
+
+.secundario.claro {
+  background-color: var(--c-papel);
+  border-color: var(--borde-fuerte);
+  color: var(--txt-primario);
+}
+
+.secundario.claro:hover {
+  border-color: var(--c-azul-700);
+  color: var(--c-azul-700);
+}
+
+.secundario.oscuro {
+  background-color: transparent;
+  border-color: var(--borde-inv-fuerte);
+  color: var(--txt-inv-primario);
+}
+
+.secundario.oscuro:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--txt-inv-primario);
+}
+
+/* --- Fantasma ------------------------------------------------------------ */
+
+.fantasma {
+  padding-inline: 0;
+  background: none;
+  align-self: center;
+}
+
+.fantasma.claro {
+  color: var(--c-azul-700);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.fantasma.claro:hover {
+  color: var(--c-cobre-800);
+}
+
+.fantasma.oscuro {
+  color: var(--c-cobre-300);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.fantasma.oscuro:hover {
+  color: var(--txt-inv-primario);
+}

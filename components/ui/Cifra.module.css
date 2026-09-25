@@ -1,0 +1,106 @@
+.cifra {
+  display: flex;
+  flex-direction: column;
+  gap: var(--e-2);
+  min-width: 0;
+}
+
+.etiqueta {
+  font-size: var(--fs-sm);
+  font-weight: var(--peso-medio);
+  line-height: var(--lh-compacto);
+  color: var(--txt-secundario);
+  text-wrap: balance;
+}
+
+.valor {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.35em;
+  font-size: var(--fs-dato);
+  color: var(--txt-primario);
+}
+
+.unidad {
+  font-size: 0.34em;
+  font-weight: var(--peso-medio);
+  letter-spacing: 0;
+  color: var(--txt-atenuado);
+  white-space: nowrap;
+}
+
+.pie {
+  display: flex;
+  flex-direction: column;
+  gap: var(--e-1);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-compacto);
+}
+
+.delta {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4em;
+  font-weight: var(--peso-semi);
+  font-variant-numeric: tabular-nums;
+}
+
+.delta > span:first-child {
+  font-size: 0.72em;
+}
+
+.bueno {
+  color: var(--c-verde-700);
+}
+
+.malo {
+  color: var(--c-rojo-700);
+}
+
+.referencia {
+  font-weight: var(--peso-normal);
+  color: var(--txt-atenuado);
+}
+
+.detalle {
+  color: var(--txt-atenuado);
+}
+
+/* --- Tamaños ------------------------------------------------------------ */
+
+.sm .valor {
+  font-size: var(--fs-dato-sm);
+}
+
+.xl .valor {
+  font-size: var(--fs-dato-xl);
+}
+
+.xl .etiqueta {
+  font-size: var(--fs-cuerpo);
+}
+
+/* --- Sobre fondo oscuro -------------------------------------------------- */
+
+.oscuro .etiqueta {
+  color: var(--txt-inv-secundario);
+}
+
+.oscuro .valor {
+  color: var(--txt-inv-primario);
+}
+
+.oscuro .unidad,
+.oscuro .detalle,
+.oscuro .referencia {
+  color: var(--txt-inv-atenuado);
+}
+
+.oscuro .bueno {
+  color: var(--c-verde-300);
+}
+
+.oscuro .malo {
+  color: var(--c-rojo-300);
+}

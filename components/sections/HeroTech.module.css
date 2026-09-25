@@ -1,0 +1,129 @@
+.fondo {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.imagen {
+  object-fit: cover;
+  object-position: 30% center;
+}
+
+.velo {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to right,
+      rgba(4, 18, 31, 0.95) 0%,
+      rgba(4, 18, 31, 0.86) 48%,
+      rgba(4, 18, 31, 0.5) 100%
+    ),
+    linear-gradient(to top, rgba(4, 18, 31, 0.92) 0%, rgba(4, 18, 31, 0) 52%);
+}
+
+.contenido {
+  position: relative;
+  padding-block: clamp(3rem, 2rem + 5vw, 6rem) var(--pad-seccion);
+}
+
+.kicker {
+  font-family: var(--f-mono);
+  font-size: var(--fs-xs);
+  font-weight: var(--peso-medio);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--c-cobre-300);
+}
+
+.titulo {
+  margin-top: var(--e-4);
+  font-size: var(--fs-h2);
+  font-weight: var(--peso-medio);
+  color: var(--txt-inv-secundario);
+}
+
+.bloqueDato {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--e-4);
+  margin-top: var(--e-3);
+  align-items: end;
+}
+
+.valor {
+  display: flex;
+  align-items: baseline;
+  gap: 0.2em;
+  font-size: clamp(4.5rem, 2.5rem + 9vw, 9rem);
+  font-weight: var(--peso-bold);
+  color: var(--txt-inv-primario);
+}
+
+.unidad {
+  font-size: 0.22em;
+  font-weight: var(--peso-medio);
+  letter-spacing: 0;
+  color: var(--c-cobre-300);
+}
+
+.contexto {
+  max-width: 46ch;
+  padding-bottom: var(--e-4);
+  font-size: var(--fs-cuerpo-lg);
+  line-height: var(--lh-cuerpo);
+  color: var(--txt-inv-secundario);
+}
+
+.contexto strong {
+  font-weight: var(--peso-semi);
+  color: var(--c-verde-300);
+}
+
+.apoyo {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--e-5);
+  margin-top: var(--e-7);
+  padding-top: var(--e-6);
+  border-top: 1px solid var(--borde-inv);
+}
+
+.item dt {
+  font-size: var(--fs-sm);
+  color: var(--txt-inv-atenuado);
+}
+
+.item dd {
+  margin: var(--e-1) 0 0;
+  font-size: var(--fs-dato-sm);
+  font-weight: var(--peso-semi);
+  letter-spacing: var(--ls-dato);
+  color: var(--txt-inv-primario);
+}
+
+.item dd span {
+  font-size: 0.5em;
+  font-weight: var(--peso-medio);
+  letter-spacing: 0;
+  color: var(--txt-inv-atenuado);
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e-3);
+  margin-top: var(--e-7);
+}
+
+@media (min-width: 760px) {
+  .bloqueDato {
+    grid-template-columns: auto 1fr;
+    gap: var(--e-7);
+  }
+
+  .apoyo {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--e-6);
+  }
+}

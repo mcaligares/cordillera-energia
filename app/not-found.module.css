@@ -1,0 +1,29 @@
+.pagina {
+  padding-block: var(--e-12);
+  max-width: 56ch;
+}
+
+.codigo {
+  font-family: var(--f-mono);
+  font-size: var(--fs-sm);
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--c-cobre-800);
+}
+
+.titulo {
+  margin-top: var(--e-4);
+  font-size: var(--fs-h1);
+}
+
+.texto {
+  margin-top: var(--e-4);
+  font-size: var(--fs-cuerpo-lg);
+  color: var(--txt-secundario);
+}
+
+.enlace {
+  display: inline-block;
+  margin-top: var(--e-6);
+  font-weight: var(--peso-semi);
+  color: var(--c-azul-700);
+}

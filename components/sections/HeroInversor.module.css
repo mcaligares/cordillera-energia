@@ -1,0 +1,269 @@
+.grilla {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--e-8);
+  padding-block: clamp(2.5rem, 1.8rem + 3.2vw, 4.5rem) var(--pad-seccion);
+  align-items: start;
+}
+
+.principal {
+  min-width: 0;
+}
+
+.kicker {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--e-3);
+  font-size: var(--fs-sm);
+  color: var(--txt-inv-atenuado);
+}
+
+.chip {
+  padding: 3px var(--e-3);
+  border: 1px solid var(--c-cobre-400);
+  border-radius: var(--r-sm);
+  font-family: var(--f-mono);
+  font-size: var(--fs-xs);
+  font-weight: var(--peso-semi);
+  letter-spacing: 0.08em;
+  color: var(--c-cobre-300);
+}
+
+.titulo {
+  margin-top: var(--e-4);
+  font-size: var(--fs-h1);
+  font-weight: var(--peso-bold);
+  letter-spacing: var(--ls-display);
+  color: var(--txt-inv-primario);
+}
+
+/* --- Cifras --------------------------------------------------------------- */
+
+.cifras {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--e-6);
+  margin-top: var(--e-7);
+  padding-top: var(--e-6);
+  border-top: 1px solid var(--borde-inv);
+}
+
+.cifras dt {
+  font-size: var(--fs-sm);
+  color: var(--txt-inv-secundario);
+}
+
+.cifras dd {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--e-2) var(--e-3);
+  margin: var(--e-2) 0 0;
+}
+
+.valorGrande {
+  font-size: var(--fs-dato-xl);
+  color: var(--txt-inv-primario);
+}
+
+.valorMedio {
+  font-size: var(--fs-dato);
+  color: var(--txt-inv-primario);
+}
+
+.unidad {
+  font-size: var(--fs-cuerpo);
+  font-weight: var(--peso-medio);
+  color: var(--txt-inv-atenuado);
+}
+
+.delta {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35em;
+  font-size: var(--fs-sm);
+  font-weight: var(--peso-semi);
+  font-variant-numeric: tabular-nums;
+  color: var(--c-verde-300);
+}
+
+.delta > span:first-child {
+  font-size: 0.72em;
+}
+
+.delta span:last-child {
+  font-weight: var(--peso-normal);
+  color: var(--txt-inv-atenuado);
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e-3);
+  margin-top: var(--e-7);
+}
+
+/* --- Panel de cotización --------------------------------------------------- */
+
+.panel {
+  padding: var(--e-5);
+  background-color: var(--sup-oscura-elevada);
+  border: 1px solid var(--borde-inv);
+  border-radius: var(--r-lg);
+}
+
+.panelCabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--e-4);
+  padding-bottom: var(--e-4);
+  border-bottom: 1px solid var(--borde-inv);
+}
+
+.panelTitulo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.simbolo {
+  font-family: var(--f-mono);
+  font-size: var(--fs-h3);
+  font-weight: var(--peso-semi);
+  letter-spacing: 0.08em;
+  color: var(--txt-inv-primario);
+}
+
+.panelSubtitulo {
+  font-size: var(--fs-xs);
+  font-weight: var(--peso-normal);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--txt-inv-atenuado);
+}
+
+.mercados {
+  display: flex;
+  flex-direction: column;
+}
+
+.mercado {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--e-4);
+  padding-block: var(--e-4);
+  border-bottom: 1px solid var(--borde-inv);
+}
+
+.mercadoPlaza {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.plaza {
+  font-size: var(--fs-sm);
+  font-weight: var(--peso-semi);
+  color: var(--txt-inv-primario);
+}
+
+.instrumento {
+  font-size: var(--fs-xs);
+  color: var(--txt-inv-atenuado);
+}
+
+.mercadoPrecio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.precio {
+  font-size: var(--fs-h3);
+  font-weight: var(--peso-semi);
+  letter-spacing: var(--ls-dato);
+  color: var(--txt-inv-primario);
+}
+
+.moneda {
+  font-size: 0.6em;
+  font-weight: var(--peso-medio);
+  color: var(--txt-inv-atenuado);
+}
+
+.variacion {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3em;
+  font-size: var(--fs-sm);
+  font-weight: var(--peso-semi);
+  font-variant-numeric: tabular-nums;
+  color: var(--c-verde-300);
+}
+
+.variacion > span:first-child {
+  font-size: 0.72em;
+}
+
+.panelPie {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--e-4);
+  padding-top: var(--e-4);
+}
+
+.panelPie dt {
+  font-size: var(--fs-sm);
+  color: var(--txt-inv-secundario);
+}
+
+.panelPie dd {
+  margin: 0;
+  font-size: var(--fs-h4);
+  font-weight: var(--peso-semi);
+  color: var(--txt-inv-primario);
+}
+
+.panelPie dd span {
+  font-size: 0.72em;
+  font-weight: var(--peso-normal);
+  color: var(--txt-inv-atenuado);
+}
+
+.nota {
+  margin-top: var(--e-4);
+  padding-top: var(--e-4);
+  border-top: 1px solid var(--borde-inv);
+  font-size: var(--fs-xs);
+  line-height: 1.5;
+  color: var(--txt-inv-atenuado);
+}
+
+/* --- Breakpoints ----------------------------------------------------------- */
+
+@media (min-width: 560px) {
+  .cifras {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cifraPrincipal {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1040px) {
+  .grilla {
+    grid-template-columns: minmax(0, 1.55fr) minmax(320px, 0.95fr);
+    gap: var(--e-9);
+  }
+
+  .panel {
+    position: sticky;
+    top: calc(var(--alto-header) + var(--e-5));
+  }
+}

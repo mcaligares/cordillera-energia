@@ -1,0 +1,28 @@
+.seccion {
+  position: relative;
+}
+
+.sinPadding {
+  padding-block: 0;
+}
+
+.claro {
+  background-color: var(--sup-base);
+  color: var(--txt-primario);
+}
+
+.hundido {
+  background-color: var(--sup-hundida);
+  color: var(--txt-primario);
+}
+
+.oscuro {
+  background-color: var(--sup-oscura);
+  color: var(--txt-inv-primario);
+}
+
+/* Filete de marca entre secciones del mismo tono */
+.claro + .claro,
+.hundido + .hundido {
+  border-top: 1px solid var(--borde-sutil);
+}

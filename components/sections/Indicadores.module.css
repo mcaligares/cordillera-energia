@@ -1,0 +1,23 @@
+.grilla {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--e-7) var(--e-6);
+}
+
+@media (min-width: 560px) {
+  .grilla {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .grilla {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Filete entre cifras: separa sin agregar cajas */
+  .grilla > * + * {
+    padding-left: var(--e-6);
+    border-left: 1px solid var(--borde-sutil);
+  }
+}

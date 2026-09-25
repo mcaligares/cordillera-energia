@@ -1,0 +1,212 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  background-color: color-mix(in srgb, var(--c-azul-900) 94%, transparent);
+  backdrop-filter: saturate(180%) blur(10px);
+  color: var(--txt-inv-primario);
+  border-bottom: 1px solid var(--borde-inv);
+}
+
+.barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--e-5);
+  min-height: var(--alto-header);
+}
+
+.logo {
+  flex: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- Navegación de escritorio -------------------------------------------- */
+
+.navEscritorio {
+  display: none;
+  flex: 1;
+}
+
+.lista {
+  display: flex;
+  align-items: center;
+  gap: var(--e-6);
+}
+
+.enlace {
+  display: inline-block;
+  padding-block: var(--e-2);
+  font-size: var(--fs-sm);
+  font-weight: var(--peso-medio);
+  color: var(--txt-inv-secundario);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color var(--t-rapida), border-color var(--t-rapida);
+}
+
+.enlace:hover {
+  color: var(--txt-inv-primario);
+  border-bottom-color: var(--c-cobre-400);
+}
+
+/* --- Acciones ------------------------------------------------------------- */
+
+.acciones {
+  display: flex;
+  align-items: center;
+  gap: var(--e-4);
+}
+
+.ticker {
+  display: none;
+  align-items: baseline;
+  gap: var(--e-3);
+  padding: var(--e-2) var(--e-4);
+  border: 1px solid var(--borde-inv);
+  border-radius: var(--r-pill);
+  font-family: var(--f-mono);
+  font-size: var(--fs-xs);
+  text-decoration: none;
+  transition: border-color var(--t-rapida), background-color var(--t-rapida);
+}
+
+.ticker:hover {
+  background-color: rgba(255, 255, 255, 0.07);
+  border-color: var(--borde-inv-fuerte);
+}
+
+.tickerSimbolo {
+  font-weight: var(--peso-semi);
+  letter-spacing: 0.07em;
+  color: var(--txt-inv-primario);
+}
+
+.tickerPrecio {
+  color: var(--txt-inv-secundario);
+}
+
+.tickerVariacion {
+  color: var(--c-verde-300);
+  font-weight: var(--peso-medio);
+}
+
+/* --- Botón de menú -------------------------------------------------------- */
+
+.hamburguesa {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e-3);
+  padding: var(--e-2) var(--e-4);
+  background: none;
+  border: 1px solid var(--borde-inv);
+  border-radius: var(--r-md);
+  font-size: var(--fs-sm);
+  font-weight: var(--peso-medio);
+  color: var(--txt-inv-primario);
+  cursor: pointer;
+}
+
+.hamburguesa:hover {
+  border-color: var(--borde-inv-fuerte);
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+.iconoHamburguesa {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 12px;
+}
+
+.raya {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 1px;
+  background-color: currentColor;
+  transition: transform var(--t-rapida), opacity var(--t-rapida);
+}
+
+.raya:nth-child(1) {
+  top: 0;
+}
+
+.raya:nth-child(2) {
+  top: 5px;
+}
+
+.raya:nth-child(3) {
+  top: 10px;
+}
+
+.rayaArriba {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.rayaMedio {
+  opacity: 0;
+}
+
+.rayaAbajo {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+/* --- Panel móvil ---------------------------------------------------------- */
+
+.panel {
+  border-top: 1px solid var(--borde-inv);
+  background-color: var(--c-azul-900);
+  padding-block: var(--e-4) var(--e-6);
+  max-height: calc(100dvh - var(--alto-header));
+  overflow-y: auto;
+}
+
+.listaPanel {
+  display: flex;
+  flex-direction: column;
+}
+
+.enlacePanel {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-block: var(--e-4);
+  border-bottom: 1px solid var(--borde-inv);
+  text-decoration: none;
+}
+
+.etiquetaPanel {
+  font-size: var(--fs-h4);
+  font-weight: var(--peso-semi);
+  color: var(--txt-inv-primario);
+}
+
+.descripcionPanel {
+  font-size: var(--fs-sm);
+  color: var(--txt-inv-atenuado);
+}
+
+/* --- Breakpoints ---------------------------------------------------------- */
+
+@media (min-width: 900px) {
+  .navEscritorio {
+    display: block;
+  }
+
+  .hamburguesa {
+    display: none;
+  }
+
+  .panel {
+    display: none;
+  }
+}
+
+@media (min-width: 1100px) {
+  .ticker {
+    display: inline-flex;
+  }
+}

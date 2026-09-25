@@ -1,0 +1,82 @@
+.grilla {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--e-5);
+}
+
+.item {
+  display: flex;
+}
+
+.articulo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: var(--e-5);
+  background-color: var(--c-papel);
+  border: 1px solid var(--borde-sutil);
+  border-radius: var(--r-lg);
+  transition: border-color var(--t-rapida), box-shadow var(--t-rapida);
+}
+
+.articulo:hover {
+  border-color: var(--borde-fuerte);
+  box-shadow: var(--sombra-md);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--e-3);
+  font-size: var(--fs-xs);
+  color: var(--txt-atenuado);
+  font-variant-numeric: tabular-nums;
+}
+
+.categoria {
+  padding: 2px var(--e-3);
+  border-radius: var(--r-pill);
+  background-color: var(--c-azul-050);
+  color: var(--c-azul-700);
+  font-weight: var(--peso-semi);
+}
+
+.titulo {
+  margin-top: var(--e-4);
+  font-size: var(--fs-h4);
+  line-height: var(--lh-compacto);
+}
+
+/* El enlace cubre toda la tarjeta: el área táctil es la tarjeta entera */
+.enlace {
+  text-decoration: none;
+}
+
+.enlace::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.articulo {
+  position: relative;
+}
+
+.enlace:hover {
+  color: var(--c-azul-700);
+  text-decoration: underline;
+}
+
+.resumen {
+  margin-top: var(--e-3);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-cuerpo);
+  color: var(--txt-secundario);
+}
+
+@media (min-width: 760px) {
+  .grilla {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

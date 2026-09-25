@@ -1,0 +1,70 @@
+.envoltorio {
+  overflow-x: auto;
+  margin-top: var(--e-5);
+  border: 1px solid var(--borde-sutil);
+  border-radius: var(--r-md);
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-sm);
+}
+
+.tabla th,
+.tabla td {
+  padding: var(--e-3) var(--e-4);
+  text-align: left;
+  border-bottom: 1px solid var(--borde-sutil);
+}
+
+.tabla thead th {
+  font-weight: var(--peso-semi);
+  color: var(--txt-secundario);
+  background-color: var(--sup-hundida);
+  white-space: nowrap;
+}
+
+.tabla tbody th {
+  font-weight: var(--peso-medio);
+  color: var(--txt-primario);
+}
+
+.tabla tbody td {
+  color: var(--txt-secundario);
+}
+
+.tabla tbody tr:last-child th,
+.tabla tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tabla th.numerica,
+.tabla td.numerica {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Sobre fondo oscuro --------------------------------------------------- */
+
+.oscuro {
+  border-color: var(--borde-inv);
+}
+
+.oscuro .tabla th,
+.oscuro .tabla td {
+  border-bottom-color: var(--borde-inv);
+}
+
+.oscuro .tabla thead th {
+  color: var(--txt-inv-secundario);
+  background-color: var(--sup-oscura-elevada);
+}
+
+.oscuro .tabla tbody th {
+  color: var(--txt-inv-primario);
+}
+
+.oscuro .tabla tbody td {
+  color: var(--txt-inv-secundario);
+}
