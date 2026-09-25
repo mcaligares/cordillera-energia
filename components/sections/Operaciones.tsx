@@ -1,7 +1,9 @@
+import Image from 'next/image';
 import Encabezado from '@/components/ui/Encabezado';
 import Seccion from '@/components/ui/Seccion';
 import { bloques, operaciones } from '@/data/operaciones';
 import estilos from './Operaciones.module.css';
+import locacion from '@/assets/marca/operaciones.png';
 
 export const SECTION_ID = 'operaciones' as const;
 
@@ -19,6 +21,22 @@ export default function Operaciones() {
         titulo={operaciones.titulo}
         bajada={operaciones.bajada}
       />
+
+      {/* "625 km²" no significa nada como número suelto: la vista aérea le
+          da la escala antes de que aparezca la tabla de bloques. */}
+      <figure className={estilos.figura}>
+        <Image
+          src={locacion}
+          alt="Vista aérea de una locación de Cordillera Energía en la estepa neuquina al atardecer: el pad de grava con el equipo de perforación, las instalaciones auxiliares y el camino de acceso, con la cordillera nevada en el horizonte."
+          sizes="(min-width: 1280px) 1216px, 100vw"
+          placeholder="blur"
+          quality={78}
+          className={estilos.imagen}
+        />
+        <figcaption className={estilos.epigrafe}>
+          Loma Chelforó · desarrollo pleno
+        </figcaption>
+      </figure>
 
       <dl className={estilos.resumen}>
         {operaciones.resumen.map((item) => (

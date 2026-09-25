@@ -232,9 +232,20 @@ La variante tech **no incluye** `quienes-somos`, `indicadores-clave`, `resultado
 | | |
 |---|---|
 | **Problema** | ISS-10 (14 JPG, media 1,9 MB, sin dimensiones, sin lazy, sin formatos modernos) e ISS-03 (LCP móvil p75 = 4,8 s, CLS = 0,31). |
-| **Cambio** | Una imagen por hero, con `next/image`, `priority`, `sizes`, `placeholder="blur"` y dimensiones derivadas del import estático. AVIF/WebP y `deviceSizes` ajustados a los breakpoints reales del sitio. Las piezas de arte se generan proceduralmente (`npm run assets`) en la paleta de marca; se reemplazan por fotografía definitiva sin tocar ningún componente. |
+| **Cambio** | Cinco imágenes en todo el sitio, con `next/image`, `sizes`, `placeholder="blur"` y dimensiones derivadas del import estático; `priority` solo en los dos heroes, lazy el resto. AVIF/WebP y `deviceSizes` ajustados a los breakpoints reales. El velo de cada hero y su `object-position` están calibrados para que el sujeto sobreviva tanto al recorte ancho de escritorio como al recorte angosto de mobile. |
 | **Hipótesis** | El LCP del hero es la mitad del problema de rebote temprano del perfil inversor. |
 | **Métrica** | LCP móvil p75 < 2,0 s y CLS < 0,05 en CrUX. |
+
+### 4.4 bis · Fotografía por sección
+
+**Secciones:** `quienes-somos`, `operaciones`, `digitalizacion` · **Archivos:** los tres componentes y sus CSS Modules
+
+| | |
+|---|---|
+| **Problema** | Fuera de los dos heroes, el sitio era íntegramente tipografía y datos. Tres secciones lo pedían por motivos distintos: `digitalizacion` describía el Centro de Operaciones Integradas —el activo que más le interesa al perfil técnico— con cuatro tarjetas de puro texto; `operaciones` enunciaba "625 km²" sin que el número signifique nada; `quienes-somos` era la única sección institucional sin ningún respiro visual. |
+| **Cambio** | Una imagen por sección, con epígrafe donde aporta: la sala del COI (16:9, banda a lo ancho), la vista aérea de una locación (16:9) y un retrato vertical de operación en campo (4:5, al lado del texto, con los tres pilares reordenados como banda debajo). **Ninguna va en la variante inversor**: ahí el criterio es datos antes que relato y una foto la empeora. |
+| **Hipótesis** | La foto del COI es lo que convierte la sección de tecnología de folleto en prueba; la aérea le da escala a una cifra que sola no se entiende. |
+| **Métrica** | `seccion_vista` de `emisiones` sobre `seccion_vista` de `digitalizacion` (si la foto retiene, sube el pasaje a la sección siguiente) y profundidad de scroll mediana en la variante tech. Contra-métrica: si el LCP de `/` empeora, la foto de `quienes-somos` está cargando antes de tiempo. |
 
 ### 4.5 · Gráficos propios
 

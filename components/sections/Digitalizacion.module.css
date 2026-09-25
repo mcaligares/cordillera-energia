@@ -1,3 +1,25 @@
+.figura {
+  margin: 0 0 var(--e-7);
+}
+
+.imagen {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--borde-inv);
+}
+
+.epigrafe {
+  margin-top: var(--e-3);
+  font-family: var(--f-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--txt-inv-atenuado);
+}
+
 .grilla {
   display: grid;
   grid-template-columns: 1fr;

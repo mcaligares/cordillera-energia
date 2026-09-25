@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """
-Genera las piezas de arte de marca como PNG reales, sin dependencias externas.
+Genera arte de marca procedural como PNG reales, sin dependencias externas.
+
+NOTA: desde que hay fotografia definitiva en assets/marca/, este script es solo
+el respaldo. Escribe en assets/marca/placeholders/ para no pisar las fotos.
 
 Son composiciones procedurales en la paleta de Cordillera Energia (azul
 cordillera + acento cobre). Estan pensadas como sustituto honesto de la
@@ -16,7 +19,7 @@ import os
 import struct
 import zlib
 
-SALIDA = os.path.join(os.path.dirname(__file__), "..", "assets", "marca")
+SALIDA = os.path.join(os.path.dirname(__file__), "..", "assets", "marca", "placeholders")
 
 
 def escribir_png(ruta, ancho, alto, filas):

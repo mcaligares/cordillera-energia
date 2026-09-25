@@ -6,7 +6,9 @@
 
 .imagen {
   object-fit: cover;
-  object-position: center 62%;
+  /* La cadena vive entre el 35 % y el 50 % de la altura de la foto: con un
+     recorte más bajo se perdía y solo quedaba el matorral del primer plano. */
+  object-position: center 46%;
 }
 
 /* Velo: garantiza el contraste del texto sobre cualquier zona de la imagen */
@@ -17,8 +19,8 @@
     linear-gradient(
       to right,
       rgba(4, 18, 31, 0.94) 0%,
-      rgba(4, 18, 31, 0.82) 42%,
-      rgba(4, 18, 31, 0.42) 100%
+      rgba(4, 18, 31, 0.8) 42%,
+      rgba(4, 18, 31, 0.26) 100%
     ),
     linear-gradient(to top, rgba(4, 18, 31, 0.9) 0%, rgba(4, 18, 31, 0) 46%);
 }

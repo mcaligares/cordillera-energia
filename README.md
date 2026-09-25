@@ -119,16 +119,45 @@ claro y en oscuro.
 
 ## Assets y documentos
 
-Las piezas de arte y los PDF de ejemplo se generan con scripts, sin dependencias:
+### Fotografía
+
+Las cinco piezas viven en `assets/marca/` (fuera de `/public`, para que entren por
+import estático y `next/image` saque de ahí las dimensiones y el blur):
+
+| Archivo | Dónde se usa | Formato | Carga |
+|---|---|---|---|
+| `hero-cordillera.png` | `/` → `hero` | 1586 × 992 | `priority`, es el LCP |
+| `subsuelo-lateral.png` | `/variantes/tech` → `hero-tech` | 1585 × 992 | `priority`, es el LCP |
+| `digitalizacion.png` | `digitalizacion` | 1672 × 941 (16:9) | lazy |
+| `operaciones.png` | `operaciones` | 1672 × 940 (16:9) | lazy |
+| `quienes-somos.png` | `quienes-somos` | 1122 × 1402 (4:5) | lazy |
+
+**Reemplazarlas es dejar caer el archivo con el mismo nombre.** No hay que tocar
+código: las dimensiones salen del import.
+
+Dos cosas a tener en cuenta si se cambian:
+
+- Los dos heroes llevan un velo oscuro que tapa el tercio izquierdo (donde va el
+  texto) y deja ver el derecho. El sujeto tiene que estar en ese lado, y el
+  `object-position` de cada hero está calibrado para que el recorte de mobile lo
+  siga. Está comentado en cada `.module.css`.
+- `hero-cordillera.png` mide 1586 px de ancho y el `deviceSize` más grande es 1920:
+  en pantallas muy anchas se escala un poco. Si molesta, regenerar a 1920.
+
+### Respaldo procedural
+
+`npm run assets` genera arte de marca procedural en `assets/marca/placeholders/`
+(escribe ahí y no en `assets/marca/` justo para no pisar la fotografía). Sirve si
+hace falta una pieza de relleno mientras se consigue la definitiva.
+
+### Documentos
 
 ```bash
-npm run assets                     # assets/marca/*.png (arte de marca procedural)
-python3 scripts/generar-docs.py    # public/docs/*.pdf (documentos de ejemplo)
+python3 scripts/generar-docs.py    # public/docs/*.pdf
 ```
 
-Existen para que la demo se recorra sin 404. Cuando lleguen la fotografía y los
-documentos definitivos, se reemplazan los archivos: las rutas y las dimensiones están
-declaradas en `/data` y en los componentes, así que no hay que tocar nada más.
+PDF de ejemplo válidos, para que la demo se recorra sin 404. Se reemplazan por los
+definitivos manteniendo el nombre; las rutas están en `data/inversores.ts`.
 
 ---
 

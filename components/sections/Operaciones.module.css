@@ -1,3 +1,26 @@
+.figura {
+  margin: 0 0 var(--e-8);
+}
+
+.imagen {
+  width: 100%;
+  height: auto;
+  /* La fuente ya es 16:9, así que no hay recorte: el pad, que es el sujeto,
+     entra entero. Un max-height acá le comería la locación. */
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--r-lg);
+}
+
+.epigrafe {
+  margin-top: var(--e-3);
+  font-family: var(--f-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--txt-atenuado);
+}
+
 .resumen {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

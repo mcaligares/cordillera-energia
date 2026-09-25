@@ -6,7 +6,9 @@
 
 .imagen {
   object-fit: cover;
-  object-position: 30% center;
+  /* El equipo de perforación está en el tercio derecho, que es justo la zona
+     donde el velo deja ver la foto. En mobile el recorte tiene que seguirlo. */
+  object-position: 74% 58%;
 }
 
 .velo {
@@ -16,8 +18,8 @@
     linear-gradient(
       to right,
       rgba(4, 18, 31, 0.95) 0%,
-      rgba(4, 18, 31, 0.86) 48%,
-      rgba(4, 18, 31, 0.5) 100%
+      rgba(4, 18, 31, 0.84) 48%,
+      rgba(4, 18, 31, 0.3) 100%
     ),
     linear-gradient(to top, rgba(4, 18, 31, 0.92) 0%, rgba(4, 18, 31, 0) 52%);
 }
