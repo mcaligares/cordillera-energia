@@ -67,7 +67,7 @@ export default function Hero() {
             evento={EVENTOS.CTA_CLICK}
             eventoProps={{ cta_id: 'hero-operaciones' }}
           >
-            Cómo operamos
+            Conocer operaciones
           </Boton>
         </div>
 
